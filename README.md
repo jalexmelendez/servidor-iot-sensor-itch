@@ -4,9 +4,9 @@ Este es el codigo fuente del servidor en python y cliente MQTT para almacenar la
 
 ## TODO
 
-[ ] - Conectar lecturas de datos de sensor
-[ ] - Conectar base de datos MongoDB
-[ ] - Desplegar a Azure
+- [ ] Conectar lecturas de datos de sensor
+- [ ] Conectar base de datos MongoDB
+- [ ] Desplegar a Azure
 
 ## Contenidos
 
@@ -37,7 +37,7 @@ Luego instalar las dependencias en requirements.txt
 ```bash
 # buscar equivalente para OS
 
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 Ejecutar servidor

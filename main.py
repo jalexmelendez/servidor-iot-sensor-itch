@@ -40,11 +40,11 @@ class DataLecture(BaseModel):
     de arduino.
     """
     device_id: int
-    frecuencia: float
-    energia: float
-    potencia: float
-    fp: float
-    corriente: float
+    frecuencia: Union[float, None]
+    energia: Union[float, None]
+    potencia: Union[float, None]
+    fp: Union[float, None]
+    corriente: Union[float, None]
 
 #################
 # Base de Datos #
@@ -91,7 +91,7 @@ def on_message(client, userdata, msg):
     """
     El callback cuando un PUBLISH message es recibido por el broker.
     """
-    #print(msg.topic+" "+str(msg.payload))
+    print(msg.topic+" "+str(msg.payload))
     try:
         bytes_to_json = json.loads(msg.payload)
         store_data(lecture=bytes_to_json)
